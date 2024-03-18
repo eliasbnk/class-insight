@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh; /* Adjust height according to your design */
+  padding-top: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 448px) {
+  .class-card .class-info-grid .column-info,
+  .class-card .professor-ratings-grid .column-info,
+  #rating-label {
+    white-space: nowrap;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 767px) {
+  #rating-label {
+    font-size: 0.65rem;
   }
-  to {
-    transform: rotate(360deg);
+  .column-info{
+    font-size: 0.65rem;
   }
+  .column-header{
+    font-size: 0.85rem;
+    font-weight: bold;
+  }
+}
+
+/* Media query for medium screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #rating-label {
+    font-size: 0.85rem;
+  }
+  .column-info{
+    font-size: 0.85rem;
+  }
+  .column-header{
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+/* Media query for large screens (laptops and desktops) */
+@media (min-width: 1024px) {
+  #rating-label {
+    font-size: 1rem; /* or any other desired size */
+  }
+  .column-info{
+    font-size: 1rem;
+  }
+  .column-header{
+    font-size: 1.15rem;
+    font-weight: bold;
+  }
+}
+
+
+
+#link-icon {
+  color: #4183c4;
+  text-decoration: underline;
+}
+
+
+#link-icon:hover {
+  color: gray;
+}
+
+#link-icon:visited {
+  color: purple;
+}
+
+#link-icon:visited:hover {
+  color: gray;
+}
+
+
+
+
+
+
+.card-header {
+  padding: 10px;
+}
+
+.right-aligned {
+  padding-right: 0;
+  text-align: right;
+}
+
+.card-meta {
+  padding: 10px;
+}
+
+.content-row {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.extra-content {
+  padding: 10px;
+}
+
+.professor-rating {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.rating-info {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 20;
+  margin-right: 10;
+  color:black;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: gray;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10 5;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: 5px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
